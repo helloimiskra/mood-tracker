@@ -1,5 +1,5 @@
 import React from 'react';
-
+import UsersContainer from './containers/UsersContainer'
 
 class App extends React.Component {
 
@@ -12,6 +12,7 @@ class App extends React.Component {
     return (
       <div className="App">
         Hello World
+        <UsersContainer/>
       </div>
     );
   }
