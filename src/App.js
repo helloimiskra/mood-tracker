@@ -1,5 +1,7 @@
 import React from 'react';
 import UsersContainer from './containers/UsersContainer'
+import { connect } from 'react-redux'
+import HomePage from './components/HomePage'
 
 class App extends React.Component {
 
@@ -11,6 +13,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <HomePage/>
         Hello World
         <UsersContainer/>
       </div>
