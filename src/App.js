@@ -14,7 +14,6 @@ class App extends React.Component {
     return (
       <div className="App">
         <HomePage/>
-        Hello World
         <UsersContainer/>
       </div>
     );
