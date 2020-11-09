@@ -1,11 +1,13 @@
 import React from 'react'
-import User from './User'
+//import User from './User'
 
 export const Users = ({users}) => {
+    debugger
     return (
         <div>
+           
             <h1>Current users</h1>
-            {users.map(user => <User user = {user}/>
+            {users.map(user => user.username
             )}
                 
                
@@ -15,3 +17,4 @@ export const Users = ({users}) => {
 
 
 export default Users
+//<User user = {user}/>

@@ -34,5 +34,5 @@ const mapDispatchToProps = dispatch => {
       addUser: user => dispatch(addUser(user))
     }
   }
-
+//<Users users = {this.props.users}/>
 export default connect(mapStateToProps, mapDispatchToProps)(UsersContainer);

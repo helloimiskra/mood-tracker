@@ -1,15 +1,15 @@
 export const fetchUsers = () => {
     return(dispatch) => {
-
         dispatch({type: 'LOADING USERS'})
         fetch('http://localhost:3000/api/v1/users')
         .then(response=> {
-            return response.json()
             debugger
-        })
+            return response.json()})
         .then(responseJSON=> {
-            let userData = responseJSON.data 
-            dispatch({type: "ADD_USERS", users: userData})
+            debugger
+            let userData = responseJSON.data.map(user=> user.attributes) 
+            debugger
+            dispatch({ type: "ADD_USERS", users: userData})
         })
     }
     
