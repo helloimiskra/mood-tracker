@@ -2,7 +2,7 @@ import {combineReducers} from 'redux';
 
 const rootReducer = combineReducers({
     users: usersReducer,
-    //days: daysReducer
+    moods: moodsReducer
 });
 
 export default rootReducer;
@@ -35,4 +35,22 @@ function usersReducer(state = [], action){
                 return state
     }
 
+}
+
+function moodsReducer(state = [], action){
+    let idx;
+    switch(action.type){
+        case "ADD_MOODS":
+            action.moods.map(mood=> state.push(mood))
+            return [...state]
+        case "ADD_MOOD":
+            return [...state, action.payload.data.attributes]
+        case "DELETE_MOOD":
+            idx = state.findIndex(mood => mood.id === action.id)
+            return {
+                ...state, days: [...state.slice(0, idx), ...state.slice(idx+1)]
+            }
+        default:
+                return state;
+    }
 }
