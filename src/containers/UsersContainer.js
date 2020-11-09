@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Users from '../components/users/Users'
+//import Users from '../components/users/Users'
 import { fetchUsers } from '../actions/fetchUsers'
 import {connect} from 'react-redux'
 import {addUser} from '../actions/addUser'
@@ -8,13 +8,14 @@ class UsersContainer extends Component {
 
     componentDidMount(){
         this.props.fetchUsers()
+
     };
 
     render() {
         return (
             <div>
                 Users Container
-                <Users users = {this.props.users}/>
+                
             </div>
         );
     }
@@ -23,7 +24,7 @@ class UsersContainer extends Component {
 const mapStateToProps = state => {
     console.log(`current state: ${state.users}`)
    return {
-      users: state.users.users,
+      users: state.users,
     }
 }
 

@@ -2,19 +2,21 @@ import {combineReducers} from 'redux';
 
 const rootReducer = combineReducers({
     users: usersReducer,
-    days: daysReducer
+    //days: daysReducer
 });
 
 export default rootReducer;
 
-function usersReducer(state = {users: []}, action){
-    let idx;
+function usersReducer(state = [], action){
+   // let idx;
     switch(action.type){
         case "ADD_USERS":
             return{
                 ...state,
                 users: action.users
             }
+            default:
+                return state
     }
 
 }

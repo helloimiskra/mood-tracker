@@ -5,8 +5,7 @@ export const Users = ({users}) => {
     return (
         <div>
             <h1>Current users</h1>
-            {users.map(
-                <User user = {user}/>
+            {users.map(user => <User user = {user}/>
             )}
                 
                
